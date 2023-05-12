@@ -1,0 +1,280 @@
+/*CSS PARA TODA A PÁGINA*/
+
+*{
+box-sizing: inherit;
+margin: 0;
+padding: 0;
+font-family: Poppins, sans-serif;
+}
+
+body{
+  color: #333;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/*MENU*/
+
+nav
+{
+background-color: #41276b;
+color: rgb(255, 255, 255);
+display: flex;
+padding: 20px;
+justify-content: space-between;
+align-items: center;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    float: right;
+}
+nav a {
+
+color: rgb(255, 255, 255);
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+nav li {
+    margin-right: 40px;
+}
+
+nav ul li a{
+    align-items: center;
+}
+
+
+.left li a{
+    justify-content: end;
+    text-decoration: none;
+    border-radius: 10px;
+    
+}
+
+.left a:hover {
+  
+    background: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border-radius: 30px;
+    color: #41276b;
+    padding: 6px 15px;
+}
+
+.logo{
+font-size: 40px;
+list-style: none;
+}
+
+.logo a{
+    font-family: 'Dancing Script', cursive;
+}
+
+.menu-h{
+    float: right;
+}
+
+button {
+  --primary-color: #000000;
+  --secondary-color: #fff;
+  --hover-color: #9d68ff;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
+
+
+/*Sobre*/
+
+header, main, footer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+/* Estilos do cabeçalho */
+header {
+  background-color: #333;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+  padding: 10px;
+}
+
+/* Estilos do conteúdo principal */
+section {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    
+}
+
+.caso{
+  display: flex;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.name{
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #04b6ec;
+  color: #fff;
+ 
+  padding: 10px;
+}
+
+/* redes sociais */
+ 
+  .social{
+  display: flex;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  
+  }
+
+  .s1 a {
+    padding-left:25 ;
+    -webkit-text-fill-color: #ffffff;
+  }
+  
+  .s2 a {
+    scroll-padding-left: 25;
+    -webkit-text-fill-color: #ffffff;
+  }
+ 
+  .s3 a{
+    padding-left: 25;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .gal{
+    width: 300px;
+    height: 300px;
+  }
+
+  .texto{
+    padding: 20px;
+  }
+
+  @media (max-width: 900px) {
+    .prods .card img p {
+      display: flex;
+  width: 200px;
+    }
+  
+    nav ul .left {
+      display: flex;
+    }
+  
+  
+    nav {
+      font-size: 10px;
+    }
+    .logo{
+      font-size: 20px;
+      list-style: none;
+      }
+      
+      .logo a{
+          font-family: 'Dancing Script', cursive;
+      }
+  
+      ul li a button{
+        font-size: 8px;
+        list-style: none;
+      }
+
+      .texto{
+        font-size: 10px;
+      }
+
+      .social li a{
+      font-size: 10px;
+      }
+
+      .social li img{
+        width: 15px;
+      }
+
+    }

@@ -1,0 +1,258 @@
+/*CSS PARA TODA A PÁGINA*/
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: Poppins, sans-serif;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100%;
+    background-color: #cccccc;
+    background-image: linear-gradient(rgb(149, 0, 255), rgb(109, 211, 255),rgb(149, 0, 255));
+    
+}
+
+/*MENU*/
+
+nav
+{
+background-color: #41276b;
+color: rgb(255, 255, 255);
+display: flex;
+padding: 20px;
+justify-content: space-between;
+align-items: center;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    float: right;
+}
+nav a {
+
+color: rgb(255, 255, 255);
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+nav li {
+    margin-right: 40px;
+}
+
+nav ul li a{
+    align-items: center;
+}
+
+
+.left li a{
+    justify-content: end;
+    text-decoration: none;
+    border-radius: 10px;
+    
+}
+
+.left a:hover {
+  
+    background: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border-radius: 30px;
+    color: #41276b;
+    padding: 6px 15px;
+}
+
+.logo{
+font-size: 40px;
+list-style: none;
+}
+
+.logo a{
+    font-family: 'Dancing Script', cursive;
+}
+
+.menu-h{
+    float: right;
+}
+
+button {
+  --primary-color: #000000;
+  --secondary-color: #fff;
+  --hover-color: #9d68ff;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
+
+/*Tela de Cadastro*/
+
+.form-box {
+ width: 300px;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 16px;
+  color: #010101;
+ margin-left: 40%;
+ margin-top: 80px;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+/*Form text*/
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+/*Inputs box*/
+.form-container {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin: 1rem 0 .5rem;
+  width: 100%;
+}
+
+.input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: .9rem;
+  padding: 8px 15px;
+}
+
+.form-section {
+  padding: 16px;
+  font-size: .85rem;
+  background-color: #ffffff;
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #df32ce;
+  transition: color .3s ease;
+}
+
+.form-section a:hover {
+  color: #9c3695;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  background-color: #5c0099;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.form button:hover {
+  background-color: #fb70d4;
+}
+
+@media (max-width: 900px) {
+  .prods .card img p {
+    display: flex;
+width: 200px;
+  }
+
+  nav ul .left {
+    display: flex;
+  }
+
+
+  nav {
+    font-size: 10px;
+  }
+  .logo{
+    font-size: 20px;
+    list-style: none;
+    }
+    
+    .logo a{
+        font-family: 'Dancing Script', cursive;
+    }
+
+    ul li a button{
+      font-size: 8px;
+      list-style: none;
+    }
+
+    .form-box{
+      margin-left: 16%;
+      margin-top: 80px;
+    }
+
+  }
